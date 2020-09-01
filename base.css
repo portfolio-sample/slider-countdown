@@ -1,0 +1,45 @@
+.count-down{
+  position: relative;
+}
+.count-down >p{
+  display: block;
+  position: absolute;
+  text-shadow: 2px 2px 4px black;
+  color: white;
+  font-weight:bold;
+  left: 10%;
+}
+.count-down >img{
+  width: 100%;
+}
+
+@media screen and (min-width: 960px) {
+  .slider-outer{
+    width: 60%;
+    margin: auto;
+  }
+  #count-down-day{
+    color: tomato;
+    font-size: 70px;
+  }
+  .count-down >p{
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 959px) {
+  .slider-outer{
+    width: 90%;
+    margin: auto;
+  }
+  .count-down >p{
+    font-size: 30px;
+  }
+  #count-down-day{
+    color: tomato;
+    font-size: 50px;
+  }
+}
+
+/* divの中に画像を入れるとおかしなサイズになる */
+/* 画像のサイズをdivを同じになるように設定したら治った */
