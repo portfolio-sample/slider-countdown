@@ -13,7 +13,12 @@
 </head>
 
 <body>
+  <div class="test-box">
+  <p class="test-p">aaaa</p>
   <p id="countDownMsg"></p>　<!-- 文字と画像の順番を入れ替えると、時々バグる -->
+  <p class="test-p">aaaa</p>
+</div>
+
   <div class="slider-outer">
     <div class="your-class">
       <div class="count-down">
@@ -43,7 +48,7 @@
       var times = 24 * 60 * 60 * 1000;
 
       setInterval(function(){
-    		var today = new Date();
+    		var today = new Date('07,23,2020, 00:00');
     		var diff  = openingDay - today;
     		var countDownDay   = Math.ceil(diff / times);// 開幕当日までの残り日数 //
 
