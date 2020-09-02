@@ -33,10 +33,10 @@
     margin: auto;
   }
   .count-down >p{
-    font-size: 30px;
+    font-size: 25px;
   }
   #count-down-day{
     color: tomato;
-    font-size: 50px;
+    font-size: 45px;
   }
 }
