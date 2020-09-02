@@ -13,22 +13,20 @@
 </head>
 
 <body>
-  <p>aaaaa</p>
+  <p>axx</p>
     <p id="countDownMsg"></p>
   <p>bbbb</p>
-
 
   <div class="slider-outer">
     <div class="your-class">
       <div class="count-down">
-        <p id="countDownMsg"></p>
+        <!-- <p id="countDownMsg"></p> -->
         <img src="img/audience.jpg" alt="">
       </div>
       <img src="img/soccer.jpg" alt="">
       <img src="img/bouldering.jpg" alt="">
     </div>
   </div>
-
 
   <script>
   // スライドショー本体のコード
@@ -55,14 +53,14 @@
         if ( diff > 0 ) { // ～開幕式当日 //
           $("#countDownMsg").html("<p>オリンピック開幕まで<br>残り<span id='count-down-day'></span>日！</p>");
           $("#count-down-day").html(countDownDay);
-        } else if(today < openingCeremony) { // 開幕式当日～開幕式前 //
-          $("#countDownMsg").html("<p>オリンピック<br><span id='count-down-day'></span></p>");
-          $("#count-down-day").html("本日開会！");
-        } else if(today < closingSession) { // 大会期間中 //
-          $("#countDownMsg").html("<p>オリンピック<br>現在、<span id='count-down-day'></span></p>");
-          $("#count-down-day").html("開催中！");
-        } else { // 閉幕後 //
-          $("#countDownMsg").remove(today);
+        // } else if(today < openingCeremony) { // 開幕式当日～開幕式前 //
+        //   $("#countDownMsg").html("<p>オリンピック<br><span id='count-down-day'></span></p>");
+        //   $("#count-down-day").html("本日開会！");
+        // } else if(today < closingSession) { // 大会期間中 //
+        //   $("#countDownMsg").html("<p>オリンピック<br>現在、<span id='count-down-day'></span></p>");
+        //   $("#count-down-day").html("開催中！");
+        // } else { // 閉幕後 //
+        //   $("#countDownMsg").remove(today);
         }
       //
       },1000);
