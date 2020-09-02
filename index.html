@@ -14,7 +14,7 @@
 
 <body>
   <div class="test-box">
-  <p class="test-p">zzzz</p>
+  <p class="test-p">aaa</p>
   <p id="countDownMsg"></p>　<!-- 文字と画像の順番を入れ替えると、時々バグる -->
   <p class="test-p">aaaa</p>
 </div>
@@ -53,7 +53,7 @@
       setInterval(function(){
         var two = 2;
         var today = new Date('07,23,2019, 00:00');
-    		var diff  = openingDay - today;
+    		var diff  = openingDay.getTime() - today.getTime();
     		var countDownDay   = Math.ceil(diff / times);// 開幕当日までの残り日数 //
 
         if(one < two){ // ～開幕式当日 //
