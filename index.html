@@ -43,17 +43,16 @@
 
     // カウントダウン部分のコード
     $(function(){
-      var openingDay = new Date('07,23,2021, 00:00');
-      var openingCeremony = new Date('07,23,2021, 20:00');
-      var closingSession = new Date('08,08,2021, 20:00');
-      var times = 24 * 60 * 60 * 1000;
-
       setInterval(function(){
+        var openingDay = new Date('07,23,2021, 00:00');
+        var openingCeremony = new Date('07,23,2021, 20:00');
+        var closingSession = new Date('08,08,2021, 20:00');
+        var times = 24 * 60 * 60 * 1000;
     		var today = new Date('07,23,2020, 00:00');
     		var diff  = openingDay - today;
     		var countDownDay   = Math.ceil(diff / times);// 開幕当日までの残り日数 //
 
-        if(1 < 2){ // ～開幕式当日 //
+        if(today < openingDay){ // ～開幕式当日 //
           $("#countDownMsg").html("<p>オリンピック開幕まで<br>残り<span id='count-down-day'></span>日！</p>");
       //     $("#count-down-day").html(countDownDay);
       //   } else if(today < openingCeremony) { // 開幕式当日～開幕式前 //
