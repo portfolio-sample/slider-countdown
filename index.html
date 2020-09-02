@@ -45,10 +45,10 @@
     <input type="button" value="Date Test" onclick="date_test();" />
   </div>
   <div>
-    Result: <span id="result"></span><br>
-    Result: <span id="results"></span><br>
-    Result: <span id="resulta"></span><br>
-    Result: <span id="resultas"></span><br>
+    today: <span id="result"></span><br>
+    1201: <span id="results"></span><br>
+    差: <span id="resulta"></span><br>
+    差(メソッド): <span id="resultas"></span><br>
   </div>
 
   <script>
@@ -74,7 +74,7 @@
 
       setInterval(function(){
         // var today = new Date('07,23,2020, 00:00');
-        var today = moment();
+        var today = moment('2021-7-22 00:00:00');
     		var diff = openingDay - today;
     		var countDownDay = Math.ceil(diff / times);// 開幕当日までの残り日数 //
         if ( today < openingDay ) { // ～開幕式当日 //
