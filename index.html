@@ -18,7 +18,7 @@
   <div class="slider-outer">
     <div class="your-class">
       <div class="count-down">
-        <!-- <p id="countDownMsg"></p> -->
+        <p id="countDownMsg"></p>
         <img src="img/audience.jpg" alt="">
       </div>
       <img src="img/soccer.jpg" alt="">
@@ -27,10 +27,10 @@
   </div>
 
 
-  <script type="text/javascript">
+  <!-- <script type="text/javascript">
     function date_test() {
-      var today = moment().format();
-      var date = moment('2018-12-01 12:00:00').format();
+      var today = moment();
+      var date = moment('2018-12-01 12:00:00');
       var resulta = date - today;
     var typo = typeof resulta;
       var diff = today.diff(date)
@@ -47,12 +47,12 @@
   </div>
   <div>
     today: <span id="result"></span><br>
-    sss120aaaaaa1: <span id="results"></span><br>
-    差いあ: <span id="resulta"></span><br>
+    1201: <span id="results"></span><br>
+    差: <span id="resulta"></span><br>
     差(メソッド): <span id="resultas"></span><br>
     diffのデータ型: <span id="typo"></span><br>
   </div>
-  <p id="countDownMsg">aaa</p>
+  <p id="countDownMsg">aaa</p> -->
 
   <script>
   // スライドショー本体のコード
@@ -67,13 +67,16 @@
 
     // カウントダウン部分のコード
     $(document).ready(function(){
-      var openingDay = moment('2021-7-23 00:00:00').format();
-      var openingCeremony = moment('2021-7-23 20:00:00').format();
-      var closingSession = moment('2021-8-08 20:00:00').format();
+      var openingDay = new Date('2021-07-23T00:00:00.000+09:00');
+      var openingCeremony = new Date('2021-07-23T20:00:00.000+09:00');
+      var closingSession = new Date('2021-08-08T20:00:00.000+09:00');
+      // var openingDay = moment('2021-7-23 00:00:00');
+      // var openingCeremony = moment('2021-7-23 20:00:00');
+      // var closingSession = moment('2021-8-08 20:00:00');
       var times = 24 * 60 * 60 * 1000;
 
       setInterval(function(){
-        var today = moment('2022-7-1 00:00:00').format();
+        var today = new Date();
     		var diff = openingDay - today;
     		var countDownDay = Math.ceil(diff / times);// 開幕当日までの残り日数 //
         if (openingDay > today ) { // ～開幕式当日 //
