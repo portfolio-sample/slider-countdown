@@ -47,7 +47,7 @@
   </div>
   <div>
     today: <span id="result"></span><br>
-    120ああｑｑｑ1: <span id="results"></span><br>
+    sss120aaaaaa1: <span id="results"></span><br>
     差: <span id="resulta"></span><br>
     差(メソッド): <span id="resultas"></span><br>
     diffのデータ型: <span id="typo"></span><br>
@@ -73,13 +73,13 @@
       var times = 24 * 60 * 60 * 1000;
 
       setInterval(function(){
-        var today = moment('2021-7-7 00:00:00');
+        var today = moment('2022-7-1 00:00:00');
     		var diff = openingDay - today;
     		var countDownDay = Math.ceil(diff / times);// 開幕当日までの残り日数 //
-        if (openingDay > today ) { // ～開幕式当日 //
+        if (openingDay == today ) { // ～開幕式当日 //
           $("#countDownMsg").html("<p>オリンピック開幕まで<br>残り<span id='count-down-day'></span>日！</p>");
           $("#count-down-day").html(countDownDay);
-        } else if(openingDay  today ) { // 開幕式当日～開幕式前 //
+        } else if(openingDay < today ) { // 開幕式当日～開幕式前 //
           $("#countDownMsg").html("<p>オリンピック<br><span id='count-down-day'></span></p>");
           $("#count-down-day").html("本日開会！");
         } else { // 大会期間中 //
