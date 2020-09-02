@@ -14,6 +14,32 @@
 </head>
 
 <body>
+
+<script type="text/javascript">
+  function date_test() {
+    var today = moment();
+    var date = moment('07,23,2021, 00:00');
+    var resulta = date - today;
+    document.getElementById("result").innerHTML = today;
+    document.getElementById("results").innerHTML = date;
+    document.getElementById("resulta").innerHTML = resulta;
+  }
+</script>
+
+<div>
+  <input type="button" value="Date Test" onclick="date_test();" />
+</div>
+<div>
+  Result: <span id="result"></span><br>
+  Result: <span id="results"></span><br>
+  Result: <span id="resulta"></span><br>
+</div>
+
+
+
+
+
+
   <p>azaaaz</p>
     <p id="countDownMsg"></p>
   <p>bbbb</p>
