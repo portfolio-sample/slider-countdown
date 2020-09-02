@@ -14,7 +14,7 @@
 
 <body>
   <div class="test-box">
-  <p class="test-p">oooo</p>
+  <p class="test-p">zzzz</p>
   <p id="countDownMsg"></p>　<!-- 文字と画像の順番を入れ替えると、時々バグる -->
   <p class="test-p">aaaa</p>
 </div>
@@ -48,13 +48,15 @@
       var openingCeremony = new Date('07,23,2021, 20:00');
       var closingSession = new Date('08,08,2021, 20:00');
       var times = 24 * 60 * 60 * 1000;
+      var one = 1;
 
       setInterval(function(){
+        var two = 2;
         var today = new Date('07,23,2019, 00:00');
     		var diff  = openingDay - today;
     		var countDownDay   = Math.ceil(diff / times);// 開幕当日までの残り日数 //
 
-        if(1 < diff){ // ～開幕式当日 //
+        if(one < two){ // ～開幕式当日 //
           $("#countDownMsg").html("<p>オリンピック開幕まで<br>残り<span id='count-down-day'></span>日！</p>");
       //     $("#count-down-day").html(countDownDay);
       //   } else if(today < openingCeremony) { // 開幕式当日～開幕式前 //
