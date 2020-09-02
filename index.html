@@ -48,7 +48,7 @@
   <div>
     today: <span id="result"></span><br>
     sss120aaaaaa1: <span id="results"></span><br>
-    差あ: <span id="resulta"></span><br>
+    差いあ: <span id="resulta"></span><br>
     差(メソッド): <span id="resultas"></span><br>
     diffのデータ型: <span id="typo"></span><br>
   </div>
@@ -73,7 +73,7 @@
       var times = 24 * 60 * 60 * 1000;
 
       setInterval(function(){
-        var today = moment('2022-7-1 00:00:00');
+        var today = moment('2022-7-1 00:00:00').format();
     		var diff = openingDay - today;
     		var countDownDay = Math.ceil(diff / times);// 開幕当日までの残り日数 //
         if (openingDay > today ) { // ～開幕式当日 //
